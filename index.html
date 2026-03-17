@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiago Cabaça — Developer & Estudante</title>
+  <meta name="description" content="Portfolio de Tiago Cabaça — Developer e estudante de Informática baseado em Lisboa."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/content.css"/>
+  <link rel="stylesheet" href="assets/css/responsive.css"/>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav>
+  <a href="index.html" class="nav-logo">Tiago<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="pages/about.html">Sobre</a></li>
+    <li><a href="pages/projects.html">Projetos</a></li>
+    <li><a href="pages/blog.html">Blog</a></li>
+    <li><a href="pages/services.html">Serviços</a></li>
+    <li><a href="pages/contact.html">Contacto</a></li>
+  </ul>
+  <a href="pages/contact.html" class="nav-cta">Falar comigo</a>
+  <button class="nav-toggle">☰</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">TC</div>
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <div class="status"><span class="status-dot"></span>Disponível para projetos</div>
+      <span style="color:var(--border2)">·</span>
+      <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">Lisboa, Portugal</span>
+    </div>
+    <h1 class="display-title hero-title">
+      Olá,<br>
+      sou <span class="accent-word">Tiago</span><br>
+      <span class="outline"><span class="typer" data-words="Web Developer,Full-Stack Dev,Open Source Dev,Freelancer">Web Developer</span>_</span>
+    </h1>
+    <p class="hero-desc">Estudante de dupla licenciatura em Informática no IADE e freelancer em Lisboa. Construo web apps, ferramentas e projetos open source, com código limpo e atenção ao que realmente importa.</p>
+    <div class="hero-actions">
+      <a href="pages/projects.html" class="btn btn-primary">Ver projetos</a>
+      <a href="pages/about.html" class="btn btn-outline">Sobre mim</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-bar"></div>Scroll</div>
+</section>
+
+<!-- SOBRE -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="photo-frame">
+          <div class="corner tl"></div><div class="corner tr"></div>
+          <div class="corner bl"></div><div class="corner br"></div>
+          <img src="assets/images/foto-perfil.jpeg" alt="Tiago Cabaça" style="width:100%;height:100%;object-fit:cover;display:block"/>
+        </div>
+        <div class="stats-row">
+          <div class="stat-block"><strong class="count-up" data-target="7" data-suffix="+">0+</strong><span>Anos a programar</span></div>
+          <div class="stat-block"><strong class="count-up" data-target="3" data-suffix="+">0+</strong><span>Projetos</span></div>
+          <div class="stat-block"><strong class="count-up" data-target="5" data-suffix="+">0+</strong><span>Linguagens</span></div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <div class="eyebrow">Sobre mim</div>
+        <h2 class="section-title">Construo coisas<br>para a web.</h2>
+        <p>Sou um developer de Lisboa a fazer uma dupla licenciatura em Engenharia Informática e Informática de Gestão no IADE. Comecei a programar em 2018 num curso profissional e nunca mais parei. Há algo de muito satisfatório em construir coisas que realmente funcionam.</p>
+        <p>Fora do código, a fotografia ocupa muito do meu tempo: câmaras analógicas, rolos de filme e médio formato. Tenho também um interesse crescente em open source e automação.</p>
+        <div class="tag-cloud">
+          <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+          <span class="tag">React</span><span class="tag">Node.js</span>
+          <span class="tag">Python</span><span class="tag">Kotlin</span>
+          <span class="tag">SQL</span><span class="tag">Git</span>
+        </div>
+        <div style="margin-top:32px"><a href="pages/about.html" class="btn btn-outline">Saber mais →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div><div class="eyebrow">Serviços</div><h2 class="section-title">O que ofereço</h2></div>
+      <a href="pages/services.html" class="btn btn-outline">Ver todos →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon">🌐</div><div class="service-name">Web Development</div><div class="service-desc">Sites e web apps rápidos, modernos e com código de qualidade. Do design ao deploy.</div></div>
+      <div class="service-card reveal"><div class="service-icon">🎨</div><div class="service-name">UI / UX Design</div><div class="service-desc">Interfaces centradas no utilizador com atenção ao detalhe visual e à usabilidade.</div></div>
+      <div class="service-card reveal"><div class="service-icon">⚡</div><div class="service-name">Optimização &amp; Performance</div><div class="service-desc">Auditoria e melhoria de sites existentes — velocidade, SEO e experiência de utilizador.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS — gerados automaticamente -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div><div class="eyebrow">Trabalho</div><h2 class="section-title">Projetos em destaque</h2></div>
+      <a href="pages/projects.html" class="btn btn-outline">Ver todos →</a>
+    </div>
+    <div class="projects-grid" id="index-projects">
+      <!-- preenchido pelo content-engine.js -->
+      <div class="skeleton" style="height:320px"></div>
+      <div class="skeleton" style="height:320px"></div>
+      <div class="skeleton" style="height:320px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG — gerado automaticamente -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div><div class="eyebrow">Blog</div><h2 class="section-title">Artigos recentes</h2></div>
+      <a href="pages/blog.html" class="btn btn-outline">Ver todos →</a>
+    </div>
+    <div class="blog-grid" id="index-blog">
+      <!-- preenchido pelo content-engine.js -->
+      <div class="skeleton" style="height:280px"></div>
+      <div class="skeleton" style="height:280px"></div>
+      <div class="skeleton" style="height:280px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO CTA -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="contact-cta-wrap reveal">
+      <div class="eyebrow" style="justify-content:center">Contacto</div>
+      <h2 class="section-title glitch" style="text-align:center">Vamos trabalhar juntos?</h2>
+      <a href="mailto:tiagocabaca@proton.me" class="contact-cta-email">tiagocabaca@proton.me</a>
+      <a href="pages/contact.html" class="btn btn-primary" style="display:inline-flex">Enviar mensagem</a>
+      <div class="social-row">
+        <a href="https://github.com/Cabacadosinformaticos" target="_blank" class="social-btn" title="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg></a>
+        <a href="https://www.reddit.com/u/TiagoCabaca007" target="_blank" class="social-btn" title="Reddit"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Tiago<span>.</span></a>
+      <p class="footer-tagline">Estudante de Informática em Portugal. A construir para a web desde 2018.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Cabacadosinformaticos" target="_blank" class="social-btn" title="GitHub"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg></a>
+        <a href="https://www.reddit.com/u/TiagoCabaca007" target="_blank" class="social-btn" title="Reddit"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <div class="footer-links">
+        <a href="index.html">Início</a><a href="pages/about.html">Sobre</a>
+        <a href="pages/projects.html">Projetos</a><a href="pages/blog.html">Blog</a>
+        <a href="pages/services.html">Serviços</a><a href="pages/uses.html">O meu setup</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="mailto:tiagocabaca@proton.me" class="footer-contact-email">tiagocabaca@proton.me</a>
+      <div class="status" style="margin-bottom:16px"><span class="status-dot"></span>Disponível para projetos</div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p class="footer-copy">© 2026 <span>Tiago Cabaça</span> · Feito com ♥ em Portugal</p>
+    <a href="#" class="footer-top-link">↑ Topo</a>
+  </div>
+</footer>
+
+</div>
+<!-- marked.js para renderizar Markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/content-engine.js"></script>
+</body>
+</html>
