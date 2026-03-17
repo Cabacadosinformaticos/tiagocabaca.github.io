@@ -1,0 +1,16 @@
+# Generated files.
+htdocs/robots.txt
+htdocs/sitemap.xml
+htdocs/blog/index.php
+
+# Docker
+docker-compose.yml
+
+# Misc.
+.DS_Store
+Thumbs.db
+
+# Composer
+composer.phar
+/vendor/
+#composer.lock
