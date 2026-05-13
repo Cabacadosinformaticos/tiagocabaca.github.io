@@ -4,6 +4,7 @@ desc: De disquetes aos oito anos ao Vice-presidente do CFD, passando por Pascal,
 category: Pessoal
 date: Mai 2025
 readTime: 8 min
+cover: /assets/images/posts/ola-mundo-cover.jpg
 ---
 
 Toda a gente tem uma história de como chegou à tecnologia. A minha começa antes de eu sequer perceber o que era um computador.
@@ -14,7 +15,7 @@ O meu pai era engenheiro informático. Mas não o tipo que deixa o trabalho no e
 
 Aos oito anos pôs nas minhas mãos um portátil antigo com disquetes e disse-me para experimentar. Sem tutoriais, sem objetivos, sem pressão. Só para mexer e ver o que acontecia. Olhando para trás, foi provavelmente a melhor coisa que podia ter feito por mim.
 
-Ele foi o meu primeiro professor de programação. Ensinou-me Pascal e COBOL, linguagens que hoje muita gente nem reconhece pelo nome, mas que ele dominava e usava no seu trabalho. Aprendi a escrever código antes de saber bem explicar o que era programação. Aprendi também a desmontar computadores com ele, a perceber o que cada componente fazia e porquê existia. Não foi uma infância normal de tecnologia. Foi melhor do que isso.
+Ele foi o meu primeiro professor de programação. Ensinou-me Pascal e COBOL, linguagens que hoje muita gente nem reconhece pelo nome, mas que ele dominava e usava no seu trabalho. Aprendi a escrever código antes de saber bem explicar o que era programação. Aprendi também a desmontar computadores com ele, a perceber o que cada componente fazia e porque existia. Não foi uma infância normal de tecnologia. Foi melhor do que isso.
 
 Já não está cá para ver o que construí até hoje. Mas a verdade é que cada vez que abro um terminal ou desmonto qualquer coisa para perceber como funciona, estou a fazer exatamente o que ele me ensinou. Obrigado, pai.
 
@@ -34,7 +35,7 @@ Entre o primeiro e o segundo ano fiz voluntariado na Câmara de Mafra, a trabalh
 
 No que toca às cadeiras, os projetos que mais me marcaram foram o Xplored e o Africana Virtual Airways. O Xplored foi o meu primeiro projeto sério em Kotlin para Android nativo, no terceiro semestre, e obrigou-me a pensar de forma completamente diferente do desenvolvimento web a que estava habituado. O Africana Virtual Airways, já no quarto semestre, foi o primeiro projeto de escala real que construí: uma plataforma full-stack de reservas de voos com API REST, base de dados relacional, dois tipos de utilizador com permissões diferentes, e um nível de complexidade que pôs à prova tudo o que sabia até aí.
 
-Grande parte desses projetos foram feitos com o César e o Muhammad. Somos um grupo que, olhando de fora, provavelmente parece caótico, e não estou a dizer que não é. Mas a verdade é que entregamos sempre o que temos de entregar, e as nossas apresentações são invariavelmente diferentes de tudo o resto, no bom sentido. O tipo de apresentações que nos surpreendem a nós próprios quando acabam. É o género de grupo de trabalho que não se encontra com facilidade.
+A maioria desses projetos foi feita com o César e o Muhammad. Somos um grupo que, olhando de fora, provavelmente parece caótico, e não estou a dizer que não é. Mas a verdade é que entregamos sempre o que temos de entregar, e as nossas apresentações são invariavelmente diferentes de tudo o resto, no bom sentido. O tipo de apresentações que nos surpreendem a nós próprios quando acabam. É o género de grupo de trabalho que não se encontra com facilidade.
 
 Para além das cadeiras, fui acumulando projetos pessoais ao longo deste percurso. O Track Manager, uma web app para gerir faixas de áudio e legendas em ficheiros de vídeo sem precisar de tocar na linha de comandos, é um deles e está em desenvolvimento ativo. Montei também os meus próprios servidores para correr serviços e experimentar coisas que me interessam: desde servidores de Minecraft a software de gestão de servidores de jogos, passando por NAS e outros projetos de infraestrutura que merecem posts próprios, que virão em breve.
 

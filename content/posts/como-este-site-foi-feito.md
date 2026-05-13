@@ -4,6 +4,7 @@ desc: A arquitetura por trás do site, as decisões técnicas e o porquê de tud
 category: Web Dev
 date: Mai 2025
 readTime: 6 min
+cover: /assets/images/posts/como-este-site-foi-feito-cover.jpg
 ---
 
 Este site não foi feito com WordPress, nem com Next.js, nem com nenhum gerador estático. É HTML, CSS e JavaScript vanilla, e funciona sem um único servidor, sem nenhum processo de build, e sem dependências instaladas localmente.
@@ -12,7 +13,7 @@ Isto foi uma escolha deliberada. Queria perceber como as coisas funcionam por ba
 
 ## O problema que quis resolver
 
-A abordagem mais óbvia para um site como este seria criar uma página HTML para cada projeto e cada post. Funciona, mas escala mal. Cada nova entrada significa duplicar estrutura, remendar estilos, certificar que a navegação está consistente. Com o tempo, o site torna-se difícil de manter.
+A abordagem mais óbvia para um site como este seria criar uma página HTML para cada projeto e cada post. Funciona, mas escala mal. Cada nova entrada significa duplicar estrutura, remendar estilos, garantir que a navegação está consistente. Com o tempo, o site torna-se difícil de manter.
 
 A alternativa era usar um CMS ou um framework, mas isso introduz complexidade que não justifica o tamanho do projeto, e afasta-me do objetivo: perceber o que estou a construir.
 
@@ -46,12 +47,11 @@ status: Concluído
 
 Conteúdo em Markdown a partir daqui.
 ```
-
 O frontmatter é o que alimenta os cards nas páginas de listagem. O corpo é o que aparece na página de detalhe. A separação é total.
 
 ## O que o Markdown permite
 
-Para além do texto, o motor reconhece blocos especiais que expande para componentes HTML. Um callout:
+Para além do texto, o motor reconhece blocos especiais e expande-os para componentes HTML. Um callout:
 
 :::callout
 Isto aparece como um bloco destacado com um estilo próprio, útil para notas ou avisos.
@@ -59,7 +59,7 @@ Isto aparece como um bloco destacado com um estilo próprio, útil para notas ou
 
 Um carrossel de imagens basta listar os caminhos:
 
-```
+```markdown
 :::carousel
 /assets/images/projects/exemplo/screenshot-1.jpg
 /assets/images/projects/exemplo/screenshot-2.jpg

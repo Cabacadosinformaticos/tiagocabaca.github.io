@@ -22,7 +22,7 @@ async function fetchMD(relativePath) {
 
 /* ── Frontmatter ── */
 function parseFrontmatter(raw) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, body: raw };
   const meta = {};
   match[1].split('\n').forEach(line => {
@@ -91,6 +91,13 @@ function getVimeoId(url)   { const m = url.match(/vimeo\.com\/(\d+)/); return m 
 
 /* ── Blocos especiais ── */
 function processBlocks(md) {
+  const fences = [];
+  md = md.replace(/```[\s\S]*?```/g, block => {
+    const token = `@@CODE_FENCE_${fences.length}@@`;
+    fences.push(block);
+    return token;
+  });
+
   md = md.replace(/:::carousel\n([\s\S]*?):::/g, (_, inner) => {
     const images = inner.trim().split('\n').filter(Boolean);
     const slides = images.map((src, i) => `<div class="carousel-slide${i === 0 ? ' active' : ''}"><img src="${src.trim()}" alt="Imagem ${i + 1}" loading="lazy"/></div>`).join('');
@@ -106,20 +113,40 @@ function processBlocks(md) {
     if (isVimeo(url))   return `<div class="video-wrap"><iframe src="https://player.vimeo.com/video/${getVimeoId(url)}" frameborder="0" allowfullscreen loading="lazy"></iframe></div>`;
     return `<div class="video-wrap"><video controls><source src="${url}"></video></div>`;
   });
+  fences.forEach((block, i) => {
+    md = md.replace(`@@CODE_FENCE_${i}@@`, block);
+  });
   return md;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 /* ── Markdown ── */
 function renderMarkdown(md) {
   if (window.marked) {
     const renderer = new window.marked.Renderer();
-    renderer.code = function(code, infoString) {
-      const titleMatch = infoString && infoString.match(/title="([^"]+)"/);
-      const lang = infoString ? infoString.replace(/\s*title="[^"]*"/, '').trim() : '';
-      let highlighted = code;
-      if (window.hljs && lang) { try { highlighted = window.hljs.highlight(code, { language: lang }).value; } catch {} }
-      const codeHtml = `<pre><code class="language-${lang}">${highlighted}</code></pre>`;
-      return titleMatch ? `<div class="code-block"><div class="code-title">${titleMatch[1]}</div>${codeHtml}</div>` : `<div class="code-block">${codeHtml}</div>`;
+    renderer.code = function(codeOrToken, infoString) {
+      const code = typeof codeOrToken === 'object' && codeOrToken !== null
+        ? codeOrToken.text || ''
+        : codeOrToken || '';
+      const rawInfo = typeof codeOrToken === 'object' && codeOrToken !== null
+        ? codeOrToken.lang || ''
+        : infoString || '';
+      const titleMatch = rawInfo.match(/title="([^"]+)"/);
+      const lang = rawInfo.replace(/\s*title="[^"]*"/, '').trim();
+      let highlighted = escapeHtml(code);
+      if (window.hljs && lang) {
+        try { highlighted = window.hljs.highlight(code, { language: lang }).value; } catch {}
+      }
+      const codeHtml = `<pre><code class="language-${escapeHtml(lang)}">${highlighted}</code></pre>`;
+      return titleMatch ? `<div class="code-block"><div class="code-title">${escapeHtml(titleMatch[1])}</div>${codeHtml}</div>` : `<div class="code-block">${codeHtml}</div>`;
     };
     renderer.image = (href, title, alt) =>
       `<figure class="post-figure"><img src="${href}" alt="${alt || ''}" loading="lazy"/>${alt ? `<figcaption>${alt}</figcaption>` : ''}</figure>`;
@@ -259,7 +286,7 @@ function blogCard(p, linkPrefix = '') {
     <div class="blog-meta">${catTags}<span class="blog-date">${p.date || ''}</span></div>
     <div class="blog-title">${p.title}</div>
     <div class="blog-excerpt">${p.desc || ''}</div>
-    <div class="blog-footer"><span class="read-time">${p.readTime || ''}</span><span class="btn-ghost" style="font-size:11px">Ler →</span></div>
+    <div class="blog-footer"><span class="read-time">${p.readTime || ''}</span><span class="btn-ghost" style="font-size:11px">Ler</span></div>
   </div>
 </a>`;
 }
@@ -394,8 +421,8 @@ function projectCard(p, linkPrefix = '') {
     <div class="project-desc">${p.desc || ''}</div>
     <div class="project-links">
       <a href="${linkPrefix}project-detail.html?id=${p.id}" class="btn-ghost">Ver projecto</a>
-      ${p.github ? `<a href="${p.github}" target="_blank" class="btn-ghost" style="margin-left:16px;color:var(--muted2)">GitHub →</a>` : ''}
-      ${p.live   ? `<a href="${p.live}"   target="_blank" class="btn-ghost" style="margin-left:16px;color:var(--muted2)">Live →</a>` : ''}
+      ${p.github ? `<a href="${p.github}" target="_blank" class="btn-ghost" style="margin-left:16px;color:var(--muted2)">GitHub</a>` : ''}
+      ${p.live   ? `<a href="${p.live}"   target="_blank" class="btn-ghost" style="margin-left:16px;color:var(--muted2)">Live</a>` : ''}
     </div>
   </div>
 </div>`;

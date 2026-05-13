@@ -15,7 +15,7 @@ O Africana Virtual Airways é o projeto principal do 4º semestre de Engenharia 
 
 ## O que a plataforma faz
 
-Do lado do passageiro, a plataforma permite pesquisar voos por origem, destino e data, ver disponibilidade e preços, selecionar lugares num mapa interativo da cabine do avião, e completar a reserva com geração de número PNR. O passageiro tem acesso ao histórico de reservas e pode consultar ou cancelar viagens existentes.
+Do lado do passageiro, a plataforma permite pesquisar voos por origem, destino e data, ver disponibilidade e preços, selecionar lugares num mapa interativo da cabine do avião, e completar a reserva com a geração de um número PNR. O passageiro tem acesso ao histórico de reservas e pode consultar ou cancelar viagens existentes.
 
 A galeria da frota apresenta os aviões da companhia com especificações técnicas, fotografias e configuração de cabine. O sistema de entretenimento a bordo (IFE) simula o catálogo de conteúdos disponíveis em voo. O mapa de voos em tempo real usa a biblioteca Leaflet para mostrar rotas e posições, com animação de aeronaves nas rotas ativas.
 

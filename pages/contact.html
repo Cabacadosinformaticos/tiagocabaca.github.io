@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto — Tiago Cabaça</title>
+  <meta name="theme-color" content="#04060f"/>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg"/>
+  <link rel="shortcut icon" href="../assets/images/favicon.svg"/>
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <link rel="stylesheet" href="../assets/css/content.css"/><link rel="stylesheet" href="../assets/css/responsive.css"/>
 </head>
@@ -37,7 +40,7 @@
       <div class="reveal">
         <div class="contact-info-block">
           <h3>Onde me encontras</h3>
-          <p>Prefiro comunicação directa. Envia um email ou usa o formulário, respondo normalmente em menos de 24 horas nos dias de semana.</p>
+          <p>Prefiro comunicação direta. Envia um email ou usa o formulário, respondo normalmente em menos de 24 horas nos dias de semana.</p>
           <div class="contact-methods">
             <div class="contact-method">
               <div class="contact-method-icon">
@@ -82,7 +85,13 @@
       <!-- Form -->
       <div class="reveal">
         <h3 style="font-family:var(--font-head);font-size:24px;font-weight:400;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:28px">Enviar mensagem</h3>
-        <form class="contact-form">
+        <div class="construction-notice" role="status" aria-live="polite">
+          <div class="construction-tape">Em construção</div>
+          <p>O formulário ainda não está ativo. Para já, usa o email ao lado para falar comigo.</p>
+        </div>
+        <form class="contact-form contact-form--disabled" aria-describedby="contact-form-status">
+          <p id="contact-form-status" class="sr-only">O formulário de contacto ainda não está ativo.</p>
+          <fieldset disabled>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome</label>
@@ -96,11 +105,11 @@
           <div class="form-group">
             <label for="type">Tipo de projeto</label>
             <select id="type" name="type">
-              <option value="">Selecciona uma opção</option>
+              <option value="">Seleciona uma opção</option>
               <option>Website / Landing page</option>
               <option>Web App</option>
               <option>UI/UX Design</option>
-              <option>Optimização / Performance</option>
+              <option>Otimização / Performance</option>
               <option>Consultoria técnica</option>
               <option>Outro</option>
             </select>
@@ -109,7 +118,8 @@
             <label for="message">Mensagem</label>
             <textarea id="message" name="message" placeholder="Conta-me mais sobre o teu projeto, orçamento estimado e prazo..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Enviar mensagem →</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Indisponível neste momento</button>
+          </fieldset>
         </form>
       </div>
 

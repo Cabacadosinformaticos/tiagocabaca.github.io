@@ -19,7 +19,7 @@ Fui Lead Developer e UI/UX Designer do projeto.
 
 O Comando Metropolitano de Lisboa (COMETLIS) gere 120 esquadras distribuídas pela área metropolitana, organizadas em divisões territoriais, de trânsito, investigação criminal, segurança de instalações e transportes públicos. A PSP opera em 13 áreas de serviço distintas, de policiamento comunitário a licenciamento de armas e objetos perdidos.
 
-O problema era concreto: um cidadão que precisa de ir à PSP muitas vezes não sabe a que esquadra ir nem quais os serviços que ela oferece. Isso gera deslocações desnecessárias, perda de tempo e frustração. A PSP queria uma solução que centralizasse essa informação e modernizasse o acesso ao serviço público.
+O problema era concreto: um cidadão que precisa de ir à PSP, muitas vezes, não sabe a que esquadra ir nem quais os serviços que ela oferece. Isso gera deslocações desnecessárias, perda de tempo e frustração. A PSP queria uma solução que centralizasse essa informação e modernizasse o acesso ao serviço público.
 
 ## O que a app faz
 
@@ -27,7 +27,7 @@ A app cobre o ciclo completo de interação entre um cidadão e a PSP em Lisboa:
 
 **Mapa interativo** com todas as 120 esquadras da área metropolitana, marcadores personalizados e filtros por tipo: todas, abertas 24h, mais próxima, esquadras territoriais, divisões. O mapa usa o Google Maps SDK com dados do Google Places e da API pública da PSP.
 
-**Páginas de detalhe de cada esquadra** com fotografias, horários, telefone, email, morada, e um mapa inline com indicações de direção diretamente integrado.
+**Páginas de detalhe de cada esquadra** com fotografias, horários, telefone, email, morada e um mapa inline com indicações de direção diretamente integrado.
 
 **13 categorias de serviço PSP** com artigos informativos para cada uma, desde trânsito e objetos perdidos a investigação criminal e licenciamento de armas. Cada categoria lista as esquadras relevantes para esse serviço.
 

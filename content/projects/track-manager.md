@@ -33,7 +33,7 @@ O ficheiro resultante é devolvido para download.
 
 **React com TypeScript** no frontend porque os tipos das faixas de vídeo são suficientemente complexos para justificar tipagem estrita. Com JavaScript puro é fácil cometer erros silenciosos na manipulação dos objetos de faixa; com TypeScript o compilador apanha esses erros antes de chegarem ao utilizador.
 
-**Vite** como bundler pelo tempo de arranque do servidor de desenvolvimento. Numa ferramenta que vou usar no dia-a-dia durante o desenvolvimento, um HMR instantâneo faz diferença real.
+**Vite** como bundler por causa do tempo de arranque do servidor de desenvolvimento. Numa ferramenta que vou usar no dia-a-dia durante o desenvolvimento, um HMR instantâneo faz diferença real.
 
 **Tailwind CSS** para a interface porque preciso de iterar rapidamente no design sem mudar de ficheiro constantemente. Para uma ferramenta utilitária, uma UI funcional e limpa é mais importante que uma UI elaborada.
 

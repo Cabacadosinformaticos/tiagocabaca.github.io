@@ -13,15 +13,37 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Mobile nav ── */
   const toggle = document.querySelector('.nav-toggle');
   const links  = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.textContent = links.classList.contains('open') ? '✕' : '☰';
-    });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+
+  if (toggle && links && nav) {
+    const closeMobileNav = () => {
       links.classList.remove('open');
+      nav.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
       toggle.textContent = '☰';
-    }));
+      toggle.setAttribute('aria-label', 'Abrir menu');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.setAttribute('type', 'button');
+    toggle.setAttribute('aria-label', 'Abrir menu');
+    toggle.setAttribute('aria-expanded', 'false');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      nav.classList.toggle('menu-open', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+      toggle.textContent = isOpen ? '×' : '☰';
+      toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && links.classList.contains('open')) closeMobileNav();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && links.classList.contains('open')) closeMobileNav();
+    });
   }
 
   /* ── Active nav link ── */
